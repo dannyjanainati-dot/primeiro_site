@@ -1,3 +1,14 @@
+:root {
+    /*aqui damos nomes as cores*/
+    color:rgb(23, 87, 23); /*cor principal do site*/
+    text: #333333; /*cor pra todos os textos*/
+    background-color: #f4f4f4; /*cor de fundo*/
+
+
+}
+
+
+
 body{ 
     margin: 0;
     font-family: Arial, Helvetica, sans-serif; /*limpar o corpo*/
@@ -22,7 +33,7 @@ body{
     font-size: 14px;
 }
 .menu-principal a:hover{
-    background-color: rgb(45, 77, 45);
+    background-color:var(cor destaque);
     color: white;
 }
 
