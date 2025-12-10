@@ -145,7 +145,113 @@ footer{
                     padding: 20px;
                         margin: 40px;
                         }
-}
+
+
+  /*responsividade Mobile*/
+  @media (max-width:768px){
+      html, body {
+        overflow-x: hidden; /* Evita barra de rolagem horizontal no mobile */
+        width: 100%; /* Garante que o conteúdo não ultrapasse a largura da tela */
+        position: relative; /* Evita problemas de posicionamento absoluto */
+        } 
+ /* 1. Ajustando o Hero Section */
+    .hero {
+        /* é aqui que vamos mudar de linha para coluna */
+        flex-direction: column;
+        
+        /* Centraliza o texto para ficar bonito no celular */
+        text-align: center;
+        
+        /* Ajustamos o padding para não comer espaço da tela pequena */
+        padding: 40px 10px;
+    }
+
+     /* 2. Ajustando o Menu para Mobile */
+    
+    /* Primeiro, garantimos que o botão do script (se existir) não apareça */
+    .menu-toggle {
+        display: none !important; 
+    }
+
+    /* Agora, transformamos a lista horizontal em vertical */
+    .menu-principal ul {
+        flex-direction: column; /* Empilha os links um embaixo do outro */
+        width: 100%; /* Ocupa a largura toda */
+        padding: 0;
+    }
+
+    /* Estiliza os links para parecerem botões de celular */
+    .menu-principal a {
+        display: block;
+        text-align: center; /* Texto no meio */
+        padding: 20px;      /* Área de clique bem grande */
+        border-bottom: 1px solid #ccc; /* Linha para separar um do outro */
+        background-color: #f9f9f9; /* Uma corzinha de fundo leve */
+    }
+    
+    /* Um efeito visual quando toca no link */
+    .menu-principal a:hover {
+        background-color: #e0e0e0;
+    }
+  /* 3. Regra de Ouro para Imagens */
+    img {
+        max-width: 100%; /* A imagem nunca será maior que a tela */
+        height: auto;    /* Mantém a proporção */
+    }
+
+    /* 4. Ajustando a seção Features (Os 3 cartões) */
+    .features-container {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    /* 5. Ajustando a seção Sobre Nós */
+    .sobre-nos {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center; /* Texto centralizado fica melhor no mobile */
+    }
+
+    .sobre-imagem {
+        padding-left: 0; /* Remove o padding lateral que usávamos no PC */
+        margin-bottom: 20px;
+    }
+
+    .sobre-imagem img {
+        display: block;
+        margin: 0 auto; /* Centraliza a imagem */
+    }
+
+    .sobre-texto {
+        padding-right: 0;
+    }
+
+    /* 6. Ajustando a seção Contato */
+    .contato {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .contato-form {
+        padding-right: 0;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    .contato-img {
+        width: 100%;
+    }
+
+
+
+
+
+
+  }
+
+
+
+
 
 
 
